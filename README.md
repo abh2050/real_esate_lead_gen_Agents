@@ -87,7 +87,7 @@ END
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/abh2050/real_esate_lead_gen_Agents
 cd real_estate_lead_generation_agent
 
 # Install dependencies
