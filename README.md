@@ -1,3 +1,4 @@
+![](https://miro.medium.com/v2/resize:fit:1200/1*6e9anJHLXcnKN-qQhiVdtg.png)
 # 🏡 RealEstateGenAI - AI-Powered Real Estate Lead Generation
 
 **Automatically find, enrich, score, and export high-quality real estate leads using a multi-agent AI system with Human-in-the-Loop review.**
