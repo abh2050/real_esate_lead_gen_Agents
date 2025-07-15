@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-tr from-slate-50 to-white scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RealEstateGenAI | AI-Powered Real Estate Lead Gen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass { backdrop-filter: blur(12px) saturate(160%); background: rgba(255,255,255,0.7); box-shadow: 0 4px 32px rgba(80,90,100,0.10);}
+    .gradient-text { background: linear-gradient(90deg, #14b8a6 30%, #0284c7 100%); -webkit-background-clip: text; color: transparent;}
+    .chart-card { background: rgba(255,255,255,0.92); border-radius: 1.25rem; box-shadow: 0 2px 24px rgba(30,41,59,0.09);}
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-tl from-slate-50 to-white">
+
+<!-- HERO -->
+<section class="max-w-5xl mx-auto pt-16 pb-12 px-5 flex flex-col items-center">
+  <img src="https://img.icons8.com/color/96/real-estate.png" alt="AI Real Estate" class="w-24 mb-2" />
+  <h1 class="text-5xl md:text-6xl font-black mb-2 tracking-tight gradient-text">RealEstateGenAI</h1>
+  <div class="text-xl md:text-2xl mb-4 font-semibold text-slate-600">The AI-Powered Real Estate Lead Revolution</div>
+  <div class="flex flex-wrap gap-3 justify-center mt-3">
+    <span class="bg-emerald-600/90 text-white px-5 py-2 rounded-full font-bold shadow">50x Faster</span>
+    <span class="bg-sky-600/80 text-white px-5 py-2 rounded-full font-bold shadow">500%+ ROI</span>
+    <span class="bg-slate-800/90 text-white px-5 py-2 rounded-full font-bold shadow">Modern Automation</span>
+  </div>
+  <p class="mt-8 mb-2 max-w-xl text-lg text-center text-slate-700">
+    <b>From 20 hours of grunt work to <span class="gradient-text font-bold">15 seconds</span> of AI magic.</b>
+    <br>
+    All-in-one platform: search, contact, qualify, and scale your pipeline—instantly.
+  </p>
+</section>
+
+<!-- STAT CARDS -->
+<section class="max-w-6xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-6 px-5 mb-12">
+  <div class="glass py-8 px-2 flex flex-col items-center text-center">
+    <span class="text-4xl font-black gradient-text mb-1">60-80%</span>
+    <div class="text-xs font-semibold text-slate-500">Time Wasted<br>on Manual Tasks</div>
+  </div>
+  <div class="glass py-8 px-2 flex flex-col items-center text-center">
+    <span class="text-4xl font-black text-emerald-600 mb-1">88.9%</span>
+    <div class="text-xs font-semibold text-slate-500">Contact Success<br>(AI Skiptrace)</div>
+  </div>
+  <div class="glass py-8 px-2 flex flex-col items-center text-center">
+    <span class="text-4xl font-black text-cyan-600 mb-1">98%</span>
+    <div class="text-xs font-semibold text-slate-500">Cost Savings<br>Per Lead</div>
+  </div>
+  <div class="glass py-8 px-2 flex flex-col items-center text-center">
+    <span class="text-4xl font-black text-fuchsia-600 mb-1">85,000+</span>
+    <div class="text-xs font-semibold text-slate-500">Annual ROI<br>Per Agent</div>
+  </div>
+</section>
+
+<!-- PAIN POINTS + BAR CHART -->
+<section class="max-w-5xl mx-auto mt-10 flex flex-col md:flex-row items-center gap-8 px-5">
+  <div class="flex-1">
+    <h2 class="text-2xl font-black mb-3 gradient-text">Why Legacy Lead Gen Fails</h2>
+    <ul class="space-y-2 text-base text-slate-700">
+      <li>• 2–4 hours to find & qualify 10–20 leads</li>
+      <li>• 60–80% of time on admin, not selling</li>
+      <li>• 20–30% contact hit rate (manual skiptracing)</li>
+      <li>• $25+/lead (labor + tools)</li>
+      <li>• Only 1–5% leads convert to deals</li>
+      <li>• <span class="text-fuchsia-700 font-bold">$150k–$700k</span> in lost revenue/year</li>
+    </ul>
+  </div>
+  <div class="flex-1 chart-card p-6 flex flex-col items-center justify-center">
+    <canvas id="manualVsAiBar" width="340" height="220"></canvas>
+    <span class="text-xs text-slate-400 mt-1">Manual vs. AI: Lead Gen Time & Conversion</span>
+  </div>
+</section>
+
+<!-- WORKFLOW TIMELINE -->
+<section class="max-w-4xl mx-auto mt-16 px-5">
+  <h2 class="text-xl font-black text-slate-800 mb-2">Your New Morning Routine (6-Min Workflow)</h2>
+  <ol class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
+    <li class="flex flex-col items-center flex-1">
+      <span class="text-2xl font-black text-emerald-700 mb-2">1️⃣</span>
+      <span class="text-slate-800 font-semibold">Input Query</span>
+      <span class="text-xs text-slate-400">30 sec</span>
+    </li>
+    <span class="hidden md:inline-block text-3xl text-slate-400 mx-2">→</span>
+    <li class="flex flex-col items-center flex-1">
+      <span class="text-2xl font-black text-sky-700 mb-2">2️⃣</span>
+      <span class="text-slate-800 font-semibold">AI Finds + Enriches</span>
+      <span class="text-xs text-slate-400">45 sec</span>
+    </li>
+    <span class="hidden md:inline-block text-3xl text-slate-400 mx-2">→</span>
+    <li class="flex flex-col items-center flex-1">
+      <span class="text-2xl font-black text-fuchsia-700 mb-2">3️⃣</span>
+      <span class="text-slate-800 font-semibold">Review & Export</span>
+      <span class="text-xs text-slate-400">5 min</span>
+    </li>
+  </ol>
+  <div class="w-full mt-6 h-2 bg-gradient-to-r from-emerald-300 via-cyan-200 to-fuchsia-200 rounded-full shadow"></div>
+  <p class="mt-6 text-center text-slate-700 text-base"><b>Manual: 4 hours+</b> → <b>AI: 6 minutes</b></p>
+</section>
+
+<!-- ROI AREA CHART -->
+<section class="max-w-4xl mx-auto mt-16 px-5">
+  <div class="chart-card p-6 mb-3">
+    <canvas id="roiArea" height="220"></canvas>
+    <div class="text-xs text-slate-400 text-center mt-1">Annual Agent ROI: Manual vs. RealEstateGenAI</div>
+  </div>
+</section>
+
+<!-- PRODUCT VALUE CARDS -->
+<section class="max-w-5xl mx-auto mt-16 px-5 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <div class="glass p-6 flex flex-col items-center text-center">
+    <img src="https://img.icons8.com/color/48/bolt.png" class="w-10 mb-2" alt="Lightning Fast" />
+    <div class="font-bold text-lg">50x Faster</div>
+    <div class="text-xs text-slate-500">4 hours of research → 15 sec of AI</div>
+  </div>
+  <div class="glass p-6 flex flex-col items-center text-center">
+    <img src="https://img.icons8.com/color/48/conference-call.png" class="w-10 mb-2" alt="Better Contact" />
+    <div class="font-bold text-lg">88.9% Skiptrace Hit Rate</div>
+    <div class="text-xs text-slate-500">vs. 25% manual; reach 3x more sellers</div>
+  </div>
+  <div class="glass p-6 flex flex-col items-center text-center">
+    <img src="https://img.icons8.com/color/48/bar-chart.png" class="w-10 mb-2" alt="ROI" />
+    <div class="font-bold text-lg">+500% ROI</div>
+    <div class="text-xs text-slate-500">Annual savings: $85k+/agent</div>
+  </div>
+</section>
+
+<!-- COMPETITIVE TABLE AND PIE CHART -->
+<section class="max-w-6xl mx-auto mt-20 px-5 grid md:grid-cols-2 gap-10 items-start">
+  <div>
+    <h2 class="text-xl font-black mb-2 text-emerald-700">How We Compare</h2>
+    <table class="w-full text-sm mt-3 rounded-2xl overflow-hidden chart-card">
+      <thead class="bg-slate-100 text-slate-600 font-bold">
+        <tr>
+          <th class="p-2">Feature</th>
+          <th class="p-2">Manual</th>
+          <th class="p-2">ChatGPT</th>
+          <th class="p-2">PropStream</th>
+          <th class="p-2 text-emerald-700">GenAI</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-700 font-semibold text-center">
+        <tr><td class="p-2 text-left">Live MLS Search</td><td>❌</td><td>❌</td><td>✅</td><td class="text-emerald-600">✅</td></tr>
+        <tr><td class="p-2 text-left">Skiptrace</td><td>Manual</td><td>❌</td><td>~25%</td><td class="text-emerald-600">88.9%</td></tr>
+        <tr><td class="p-2 text-left">Automated Workflow</td><td>❌</td><td>❌</td><td>❌</td><td class="text-emerald-600">✅</td></tr>
+        <tr><td class="p-2 text-left">Human Review</td><td>❌</td><td>❌</td><td>❌</td><td class="text-emerald-600">✅</td></tr>
+        <tr><td class="p-2 text-left">CRM Export</td><td>❌</td><td>❌</td><td>❌</td><td class="text-emerald-600">✅</td></tr>
+        <tr><td class="p-2 text-left">Cost/Lead</td><td>$25</td><td>$20+</td><td>$0.50-1</td><td class="text-emerald-600">$0.50</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="chart-card p-4 flex flex-col items-center justify-center">
+    <canvas id="marketPie" width="250" height="250"></canvas>
+    <span class="text-xs text-slate-400 mt-1">Annual Market Spend (US PropTech Lead Gen)</span>
+  </div>
+</section>
+
+<!-- MARKET + CTA -->
+<section class="max-w-4xl mx-auto mt-16 px-5 mb-14">
+  <div class="glass p-7 rounded-2xl text-center">
+    <div class="text-2xl md:text-3xl font-black gradient-text mb-2">Market Opportunity</div>
+    <p class="text-lg mb-3 text-slate-700">
+      <span class="font-bold text-emerald-700">2M+ agents</span> · <span class="font-bold text-cyan-700">10M+ investors</span> · <span class="font-bold text-fuchsia-700">$3B+ annual spend</span>
+      <br>
+      <span class="text-slate-600">Agents & investors pay $200–$500/mo for leads & automation</span>
+    </p>
+    <a href="#" class="inline-block mt-6 px-10 py-4 rounded-full font-bold text-lg bg-gradient-to-tr from-emerald-500 via-cyan-500 to-fuchsia-400 text-white shadow-xl hover:scale-105 transition">
+      Build with RealEstateGenAI
+    </a>
+  </div>
+</section>
+
+<footer class="text-center text-slate-400 text-xs pb-7 pt-4">
+  © 2025 RealEstateGenAI &middot; Data: NAR, PropStream, VerifiedMarket &middot; Designed with ❤️
+</footer>
+
+<!-- CHART.JS CODE -->
+<script>
+  // Manual vs AI Bar
+  new Chart(document.getElementById('manualVsAiBar'), {
+    type: 'bar',
+    data: {
+      labels: ['Manual', 'RealEstateGenAI'],
+      datasets: [
+        { label: 'Lead Gen Time (mins/20 leads)', backgroundColor: ['#0284c7','#14b8a6'], data: [180, 6] },
+        { label: 'Conversion Rate (%)', backgroundColor: ['#f472b6','#10b981'], data: [2, 8] }
+      ]
+    },
+    options: {
+      plugins: { legend: {display: false} },
+      scales: {
+        y: { beginAtZero: true, max: 200, ticks: { stepSize: 50 } }
+      }
+    }
+  });
+
+  // ROI Area Chart
+  new Chart(document.getElementById('roiArea'), {
+    type: 'line',
+    data: {
+      labels: ['Year 1','Year 2','Year 3'],
+      datasets: [
+        {
+          label: 'Manual',
+          data: [25000,26000,27000],
+          fill: true, borderColor:'#f59e42', backgroundColor:'rgba(251,191,36,0.11)', tension:0.4
+        },
+        {
+          label: 'RealEstateGenAI',
+          data: [85000,91000,100000],
+          fill: true, borderColor:'#14b8a6', backgroundColor:'rgba(45,212,191,0.12)', tension:0.4
+        }
+      ]
+    },
+    options: {
+      plugins: { legend: {display: true, position:'bottom'} },
+      scales: { y: { beginAtZero: true, ticks: {callback: val=>"$"+val/1000+"k"} } }
+    }
+  });
+
+  // Market Pie Chart
+  new Chart(document.getElementById('marketPie'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Manual Tools', 'PropStream', 'ChatGPT', 'RealEstateGenAI'],
+      datasets: [{
+        data: [45, 25, 10, 20],
+        backgroundColor: ['#fbbf24','#0ea5e9','#e0e7ef','#14b8a6'],
+        borderWidth:1
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { display: true, position: 'bottom' }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

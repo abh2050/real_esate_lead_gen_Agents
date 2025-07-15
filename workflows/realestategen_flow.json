@@ -1,0 +1,171 @@
+{
+  "description": "Real Estate Lead Generation AI Workflow",
+  "name": "RealEstateLeadGen",
+  "flow": {
+    "nodes": [
+      {
+        "id": "intent_agent",
+        "type": "IntentAgent",
+        "position": { "x": 100, "y": 100 },
+        "data": {
+          "label": "Intent Agent",
+          "description": "Analyzes user query and extracts search criteria",
+          "component": "IntentAgent",
+          "inputs": ["user_query"],
+          "outputs": ["search_criteria"]
+        }
+      },
+      {
+        "id": "search_agent", 
+        "type": "SearchAgent",
+        "position": { "x": 300, "y": 100 },
+        "data": {
+          "label": "Search Agent",
+          "description": "Searches multiple property data sources",
+          "component": "SearchAgent", 
+          "inputs": ["search_criteria"],
+          "outputs": ["raw_listings"]
+        }
+      },
+      {
+        "id": "filter_agent",
+        "type": "FilterAgent", 
+        "position": { "x": 500, "y": 100 },
+        "data": {
+          "label": "Filter Agent",
+          "description": "Filters listings by criteria and quality",
+          "component": "FilterAgent",
+          "inputs": ["raw_listings", "search_criteria"],
+          "outputs": ["filtered_listings"]
+        }
+      },
+      {
+        "id": "enrichment_agent",
+        "type": "EnrichmentAgent",
+        "position": { "x": 100, "y": 300 },
+        "data": {
+          "label": "Enrichment Agent", 
+          "description": "Enriches leads with contact information",
+          "component": "EnrichmentAgent",
+          "inputs": ["filtered_listings"],
+          "outputs": ["enriched_leads"]
+        }
+      },
+      {
+        "id": "scoring_agent",
+        "type": "ScoringAgent",
+        "position": { "x": 300, "y": 300 },
+        "data": {
+          "label": "Scoring Agent",
+          "description": "Scores lead quality using LLM analysis", 
+          "component": "ScoringAgent",
+          "inputs": ["enriched_leads"],
+          "outputs": ["scored_leads"]
+        }
+      },
+      {
+        "id": "human_review",
+        "type": "HumanReview",
+        "position": { "x": 500, "y": 300 },
+        "data": {
+          "label": "Human Review",
+          "description": "Human-in-the-loop lead review and approval",
+          "component": "HumanReview",
+          "inputs": ["scored_leads"],
+          "outputs": ["approved_leads"]
+        }
+      },
+      {
+        "id": "formatter_agent",
+        "type": "FormatterAgent",
+        "position": { "x": 300, "y": 500 },
+        "data": {
+          "label": "Formatter Agent",
+          "description": "Exports leads to various formats",
+          "component": "FormatterAgent", 
+          "inputs": ["approved_leads"],
+          "outputs": ["exported_files"]
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "intent_to_search",
+        "source": "intent_agent",
+        "target": "search_agent",
+        "sourceHandle": "search_criteria",
+        "targetHandle": "search_criteria"
+      },
+      {
+        "id": "search_to_filter", 
+        "source": "search_agent",
+        "target": "filter_agent",
+        "sourceHandle": "raw_listings",
+        "targetHandle": "raw_listings"
+      },
+      {
+        "id": "filter_to_enrichment",
+        "source": "filter_agent", 
+        "target": "enrichment_agent",
+        "sourceHandle": "filtered_listings",
+        "targetHandle": "filtered_listings"
+      },
+      {
+        "id": "enrichment_to_scoring",
+        "source": "enrichment_agent",
+        "target": "scoring_agent", 
+        "sourceHandle": "enriched_leads",
+        "targetHandle": "enriched_leads"
+      },
+      {
+        "id": "scoring_to_human",
+        "source": "scoring_agent",
+        "target": "human_review",
+        "sourceHandle": "scored_leads", 
+        "targetHandle": "scored_leads"
+      },
+      {
+        "id": "human_to_formatter",
+        "source": "human_review",
+        "target": "formatter_agent",
+        "sourceHandle": "approved_leads",
+        "targetHandle": "approved_leads"
+      }
+    ]
+  },
+  "parameters": {
+    "max_leads_per_search": {
+      "type": "integer",
+      "default": 50,
+      "description": "Maximum number of leads to process per search"
+    },
+    "min_lead_score": {
+      "type": "float", 
+      "default": 30.0,
+      "description": "Minimum score for lead inclusion"
+    },
+    "require_human_review": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether human review is required"
+    },
+    "auto_export": {
+      "type": "boolean",
+      "default": false, 
+      "description": "Automatically export after human review"
+    },
+    "output_format": {
+      "type": "select",
+      "default": "csv",
+      "options": ["csv", "json", "excel", "google_sheets"],
+      "description": "Output format for leads"
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-01-01",
+    "author": "RealEstateGenAI",
+    "tags": ["real-estate", "lead-generation", "ai", "human-in-the-loop"],
+    "category": "Business Automation"
+  }
+}

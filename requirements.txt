@@ -1,0 +1,44 @@
+# Core AI/ML Framework
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-openai>=0.2.0
+langchain-google-genai>=1.0.0
+
+# UI and Web Framework
+streamlit>=1.28.0
+plotly>=5.17.0
+pandas>=2.1.0
+
+# API and Data Processing
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+aiohttp>=3.9.0
+
+# Database and Storage
+sqlite3
+google-api-python-client>=2.100.0
+gspread>=5.12.0
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# Utility Libraries
+typing-extensions>=4.8.0
+asyncio
+json5>=0.9.0
+
+# Optional: Real Estate APIs (comment out if not using)
+# realty-mole-api
+# propertyradar-api
+
+# Optional: Enrichment APIs (comment out if not using)
+# clearbit
+# hunter
+
+# Development and Testing
+pytest>=7.4.0
+black>=23.9.0
+flake8>=6.1.0
